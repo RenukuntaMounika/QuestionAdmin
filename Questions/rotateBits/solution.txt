@@ -1,0 +1,23 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Test {
+    
+    // Driver program to test above function 
+	public static void main (String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t>0)
+		{
+		    int n=sc.nextInt();
+            int d=sc.nextInt();
+		    rotateBits(n,d);
+		}
+	}
+	static void rotateBits(int n,int d)
+	{
+        System.out.println((n << d) | (n >> (INT_BITS - d)));
+        System.out.println((n >> d) | (n << (INT_BITS - d)));
+    } 
+}
